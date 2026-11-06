@@ -152,3 +152,42 @@ while (myContador < myList.length) {
     console.log(myList[myContador]);
     myContador++;
 }
+
+
+// Clases
+// sirven para crear objetos, y podemos tiparlas para que solo acepten un tipo de dato
+
+class MyClass {
+    name : string;
+    age : number;
+
+    // constructor es un metodo especial que se ejecuta cuando se crea un objeto de la clase
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+// instanciamos un objeto de la clase MyClass
+
+let myObject = new MyClass("Martín", 25);
+console.log(myObject);
+console.log(typeof myObject);
+console.log(myObject.name);
+console.log(myObject.age);
+
+// Otros tipos de datos que podemos utilizar en TypeScript son: null, undefined, any, void, never, unknown, tuple, enum, etc.
+// Enums son un tipo de dato que nos permite definir un conjunto de valores posibles para una variable, y podemos tiparlas para que solo acepten un tipo de dato
+
+enum MyEnum {
+    DART = "dart",
+    PYTHON = "python",
+    SWIFT = "swift",
+    JAVA = "java",
+    JAVASCRIPT = "javascript",
+    TYPESCRIPT = "typescript"
+}
+
+const myEnum = MyEnum.DART;
+console.log(myEnum);
+console.log(typeof myEnum);
