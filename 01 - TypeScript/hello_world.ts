@@ -87,3 +87,27 @@ if (myNumber == 10 && myString == "Hola") {
 
 
 // Funciones 
+
+// el void se utilizaria si ya no quiero retornar nada, es decir que la funcion no retorna nada
+// function myFunction(): void {
+// aunque si esta vacio ya estipula el lenguaje que es vació
+
+function myFunction() {
+    console.log("Esto es una funcion");
+}
+
+myFunction();
+
+function myFunction2(): string {
+    return "Esto es una funcion que retorna un string";
+}
+
+console.log(myFunction2());
+
+// Aca podemos ver como se puede retornar un valor de una funcion, y como se puede tipar el valor que retorna la funcion
+// Y esta fuertemente tipado
+function sumTwoNumbers(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+console.log(sumTwoNumbers(5, 10));
