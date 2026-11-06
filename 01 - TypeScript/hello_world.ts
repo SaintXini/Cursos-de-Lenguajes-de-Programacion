@@ -111,3 +111,30 @@ function sumTwoNumbers(num1: number, num2: number): number {
 }
 
 console.log(sumTwoNumbers(5, 10));
+
+
+// Listas
+// Listas de datos, que pueden ser de cualquier tipo de dato, y podemos tiparlas para que solo acepten un tipo de dato
+
+let myList: Array<string> = ["Hola", "Mundo", "Esto", "Es", "Una", "Lista"];
+console.log(myList);
+console.log(typeof myList);
+
+// Set
+
+let mySet: Set<string> = new Set(["Hola", "Mundo", "Esto", "Es", "Un", "Set", "Set"]);
+mySet.add("Sets");
+console.log(mySet);
+console.log(typeof mySet);
+
+
+// Maps
+// clave tipo valor
+
+let myMap: Map<string, number> = new Map([["Cuatro", 4]]);
+myMap.set("Uno", 1);
+myMap.set("Dos", 2);
+myMap.set("Tres", 3);
+console.log(myMap);
+console.log(myMap.get("Uno"));
+console.log(typeof myMap);
