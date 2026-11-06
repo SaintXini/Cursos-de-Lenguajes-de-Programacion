@@ -40,7 +40,7 @@ let myNumber = 7;
 myNumber = myNumber + 1;
 console.log(myNumber);
 console.log(typeof myNumber);
-console.log(myNumber - 2);
+console.log(myNumber - 1);
 
 console.log(myString + " " + myNumber);
 
@@ -62,3 +62,15 @@ console.log(typeof myBoolean);
 let myUndefined: undefined = undefined;
 console.log(myUndefined);
 console.log(typeof myUndefined);
+
+// Contorles de flujo
+// para ver como se ejecuta el flujo de un programa, podemos utilizar los condicionales if, else if y else
+myNumber = 7;
+
+if (myNumber == 10 && myString == "Hola") {
+    console.log("El valor es igual a 10");
+} else if (myNumber == 7 || myString == "Hola") {
+    console.log("El valor es igual a 7");
+} else {
+    console.log("El valor no es igual a 10");
+}
