@@ -27,8 +27,38 @@ var myString = "Esto es una cadena de texto";
 // myString = 5 daría un error, proque infiere que es un string, y no se puede asignar un numero a un string
 console.log(myString);
 
-let myString2 = "Esto es otra cadena de texto";
+let myString2: string = "Esto es otra cadena de texto";
 console.log(myString2);
 
 myString2 = "Esto es otra cadena de texto modificada";
 console.log(myString2);
+console.log(typeof myString2);
+
+// aca podemos utilizar tambien interfaces
+
+let myNumber = 7;
+myNumber = myNumber + 1;
+console.log(myNumber);
+console.log(typeof myNumber);
+console.log(myNumber - 2);
+
+console.log(myString + " " + myNumber);
+
+let myNumber2 = 10.5;
+console.log(myNumber2);
+console.log(typeof myNumber2);
+
+let myBoolean: boolean = true;
+console.log(myBoolean);
+console.log(typeof myBoolean);
+
+// any lo podemos utilizar cuanedo un valor de un dato no es fijo
+// es mejor utilizarlo en javasdript
+// myBoolean: any = ;
+
+
+// Si algo no esta definido
+// no le podemos dar valor si no esta indefinido
+let myUndefined: undefined = undefined;
+console.log(myUndefined);
+console.log(typeof myUndefined);
