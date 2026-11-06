@@ -191,3 +191,9 @@ enum MyEnum {
 const myEnum = MyEnum.DART;
 console.log(myEnum);
 console.log(typeof myEnum);
+
+
+// Para crear un fichero de configuración de TypeScript, podemos utilizar el comando "tsc --init", y nos creará un fichero tsconfig.json, donde podemos configurar las opciones de compilación de TypeScript, como el target, el module, el outDir, etc.
+// Crea el fichero por configuración de TypeScript, y nos permite configurar las opciones de compilación de TypeScript, como el target, el module, el outDir, etc.
+// en donde nos puede dcir que version de JavaScript queremos que se compile nuestro código TypeScript, y que tipo de módulo queremos utilizar, entre otras cosas
+// npx tsc --init
