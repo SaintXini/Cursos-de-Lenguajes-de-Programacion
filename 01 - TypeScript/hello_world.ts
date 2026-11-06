@@ -2,4 +2,198 @@
 // Hola Mundo
 // Esto es lo bueno de typescript, que podemos ver los errores
 // Y tambien es similar a JavaScript, por lo que es facil de aprender
-console.log("Hola Mundo");
+// No hace falta poner ";", pero es buena practica ponerlo al final de cada linea
+// Typescript es un superconjunto de JavaScript, por lo que podemos usar todas las funcionalidades de JavaScript
+
+
+console.log("Hola TypeScript");
+
+// Aca puedo ver toda la documentación de typescript
+// Importante leerlo para mejroar en esto, aunque es similar que javascript
+// https://www.typescriptlang.org/docs/
+
+
+// Sintaxis como trabajar en typescript
+
+// Comentarios
+
+/*
+varias lineas de comentarios
+*/
+
+// VAriables
+
+var myString = "Esto es una cadena de texto";
+// myString = 5 daría un error, proque infiere que es un string, y no se puede asignar un numero a un string
+console.log(myString);
+
+let myString2: string = "Esto es otra cadena de texto";
+console.log(myString2);
+
+myString2 = "Esto es otra cadena de texto modificada";
+console.log(myString2);
+console.log(typeof myString2);
+
+// aca podemos utilizar tambien interfaces
+
+let myNumber = 7;
+myNumber = myNumber + 1;
+console.log(myNumber);
+console.log(typeof myNumber);
+console.log(myNumber - 1);
+
+console.log(myString + " " + myNumber);
+
+let myNumber2 = 10.5;
+console.log(myNumber2);
+console.log(typeof myNumber2);
+
+let myBoolean: boolean = true;
+console.log(myBoolean);
+console.log(typeof myBoolean);
+
+// any lo podemos utilizar cuanedo un valor de un dato no es fijo
+// es mejor utilizarlo en javasdript
+// myBoolean: any = ;
+
+
+// Si algo no esta definido
+// no le podemos dar valor si no esta indefinido
+let myUndefined: undefined = undefined;
+console.log(myUndefined);
+console.log(typeof myUndefined);
+
+// Constantes
+
+const myConst = "Esto es una constante";
+// myConst = "Esto es una constante modificada"; // daría un error, porque no se puede modificar una constante
+console.log(myConst);
+console.log(typeof myConst);
+
+
+// Contorles de flujo
+// para ver como se ejecuta el flujo de un programa, podemos utilizar los condicionales if, else if y else
+myNumber = 7;
+
+if (myNumber == 10 && myString == "Hola") {
+    console.log("El valor es igual a 10");
+} else if (myNumber == 7 || myString == "Hola") {
+    console.log("El valor es igual a 7");
+} else {
+    console.log("El valor no es igual a 10");
+}
+
+
+
+
+// Funciones 
+
+// el void se utilizaria si ya no quiero retornar nada, es decir que la funcion no retorna nada
+// function myFunction(): void {
+// aunque si esta vacio ya estipula el lenguaje que es vació
+
+function myFunction() {
+    console.log("Esto es una funcion");
+}
+
+myFunction();
+
+function myFunction2(): string {
+    return "Esto es una funcion que retorna un string";
+}
+
+console.log(myFunction2());
+
+// Aca podemos ver como se puede retornar un valor de una funcion, y como se puede tipar el valor que retorna la funcion
+// Y esta fuertemente tipado
+function sumTwoNumbers(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+console.log(sumTwoNumbers(5, 10));
+
+
+// Listas
+// Listas de datos, que pueden ser de cualquier tipo de dato, y podemos tiparlas para que solo acepten un tipo de dato
+
+let myList: Array<string> = ["Hola", "Mundo", "Esto", "Es", "Una", "Lista"];
+console.log(myList);
+console.log(typeof myList);
+
+// Set
+
+let mySet: Set<string> = new Set(["Hola", "Mundo", "Esto", "Es", "Un", "Set", "Set"]);
+mySet.add("Sets");
+console.log(mySet);
+console.log(typeof mySet);
+
+
+// Maps
+// clave tipo valor
+
+let myMap: Map<string, number> = new Map([["Cuatro", 4]]);
+myMap.set("Uno", 1);
+myMap.set("Dos", 2);
+myMap.set("Tres", 3);
+console.log(myMap);
+console.log(myMap.get("Uno"));
+console.log(typeof myMap);
+
+// Bucles
+// for
+for (const value of myList) {
+    console.log(value);
+}
+
+// While
+
+let myContador = 0;
+while (myContador < myList.length) {
+    console.log(myList[myContador]);
+    myContador++;
+}
+
+
+// Clases
+// sirven para crear objetos, y podemos tiparlas para que solo acepten un tipo de dato
+
+class MyClass {
+    name : string;
+    age : number;
+
+    // constructor es un metodo especial que se ejecuta cuando se crea un objeto de la clase
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+// instanciamos un objeto de la clase MyClass
+
+let myObject = new MyClass("Martín", 25);
+console.log(myObject);
+console.log(typeof myObject);
+console.log(myObject.name);
+console.log(myObject.age);
+
+// Otros tipos de datos que podemos utilizar en TypeScript son: null, undefined, any, void, never, unknown, tuple, enum, etc.
+// Enums son un tipo de dato que nos permite definir un conjunto de valores posibles para una variable, y podemos tiparlas para que solo acepten un tipo de dato
+
+enum MyEnum {
+    DART = "dart",
+    PYTHON = "python",
+    SWIFT = "swift",
+    JAVA = "java",
+    JAVASCRIPT = "javascript",
+    TYPESCRIPT = "typescript"
+}
+
+const myEnum = MyEnum.DART;
+console.log(myEnum);
+console.log(typeof myEnum);
+
+
+// Para crear un fichero de configuración de TypeScript, podemos utilizar el comando "tsc --init", y nos creará un fichero tsconfig.json, donde podemos configurar las opciones de compilación de TypeScript, como el target, el module, el outDir, etc.
+// Crea el fichero por configuración de TypeScript, y nos permite configurar las opciones de compilación de TypeScript, como el target, el module, el outDir, etc.
+// en donde nos puede dcir que version de JavaScript queremos que se compile nuestro código TypeScript, y que tipo de módulo queremos utilizar, entre otras cosas
+// npx tsc --init
