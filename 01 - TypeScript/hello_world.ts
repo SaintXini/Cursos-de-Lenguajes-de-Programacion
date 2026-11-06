@@ -63,6 +63,14 @@ let myUndefined: undefined = undefined;
 console.log(myUndefined);
 console.log(typeof myUndefined);
 
+// Constantes
+
+const myConst = "Esto es una constante";
+// myConst = "Esto es una constante modificada"; // daría un error, porque no se puede modificar una constante
+console.log(myConst);
+console.log(typeof myConst);
+
+
 // Contorles de flujo
 // para ver como se ejecuta el flujo de un programa, podemos utilizar los condicionales if, else if y else
 myNumber = 7;
@@ -74,3 +82,8 @@ if (myNumber == 10 && myString == "Hola") {
 } else {
     console.log("El valor no es igual a 10");
 }
+
+
+
+
+// Funciones 
