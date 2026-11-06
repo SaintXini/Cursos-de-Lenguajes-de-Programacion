@@ -138,3 +138,17 @@ myMap.set("Tres", 3);
 console.log(myMap);
 console.log(myMap.get("Uno"));
 console.log(typeof myMap);
+
+// Bucles
+// for
+for (const value of myList) {
+    console.log(value);
+}
+
+// While
+
+let myContador = 0;
+while (myContador < myList.length) {
+    console.log(myList[myContador]);
+    myContador++;
+}
